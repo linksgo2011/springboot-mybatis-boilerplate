@@ -1,13 +1,14 @@
 package boilerplate;
 
-import boilerplate.dao.UserMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
-public class Application {
+import java.lang.instrument.Instrumentation;
 
+@SpringBootApplication
+@MapperScan(basePackages = {"boilerplate.dao"})
+public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }

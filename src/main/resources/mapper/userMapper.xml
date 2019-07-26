@@ -2,6 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="boilerplate.dao.UserMapper">
     <select id="findAllByTaskId" resultType="boilerplate.model.User">
-        select * from `user` where task_id = #taskId
+        select * from `user` where task_id = #{taskId}
+    </select>
+
+    <select id="countAllByTaskId" resultType="int">
+        select count(1) from `user` where task_id = #{taskId}
+    </select>
+
+    <select id="findAllByTaskIdAndPage" resultType="boilerplate.model.User">
+        select * from `user` where task_id = #{taskId} limit #{start},#{limit}
+    </select>
+
+    <select id="replicateDataByTaskId">
+        insert into user_temp(id,phone_nbr,open_id,project_from,task_id)
+        select id,phone_nbr,open_id,project_from,task_id from user where task_id=#{taskId}
     </select>
 </mapper>
