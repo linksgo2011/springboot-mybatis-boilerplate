@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boilerplate.repository.EmployeeMapper">
+    <select id="selectAll" resultType="boilerplate.entity.Employee">
+        select * from `employee`;
+    </select>
+
+    <insert id="insert" parameterType="boilerplate.entity.Employee">
+       insert into `employee`(`id`,`name`,`age`) values(#{employee.id},#{employee.name},#{employee.age});
+    </insert>
+</mapper>

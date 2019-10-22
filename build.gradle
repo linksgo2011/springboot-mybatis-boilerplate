@@ -1,21 +1,26 @@
 buildscript {
+    ext {
+        springBootVersion = '2.0.3.RELEASE'
+    }
     repositories {
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.0'
     }
 }
 
-plugins {
-    id 'org.springframework.boot' version '2.1.6.RELEASE'
-    id 'java'
-    id 'idea'
-}
-
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-group = 'printf.cn'
+group = 'com.tw'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = 1.8
 
 repositories {
     maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
@@ -25,9 +30,10 @@ repositories {
 
 dependencies {
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.0'
-    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compile 'com.h2database:h2'
 
-    runtimeOnly 'mysql:mysql-connector-java'
-
+    implementation 'org.flywaydb:flyway-core'
+    testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:2.1.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
