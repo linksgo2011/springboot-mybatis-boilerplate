@@ -2,6 +2,7 @@ package boilerplate.controller;
 
 import boilerplate.entity.Employee;
 import boilerplate.repository.EmployeeMapper;
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.net.URI;
@@ -23,7 +25,8 @@ public class EmployeeController {
 
     @GetMapping("")
     @CrossOrigin
-    public ResponseEntity<List<Employee>> getAll() {
+    public ResponseEntity<List<Employee>> getAll(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "0") Integer size) {
+        PageHelper.startPage(page, size);
         return ResponseEntity.ok(employeeMapper.selectAll());
     }
 
