@@ -12,6 +12,11 @@ A boilerplate Template project for spring boot with mybatis.
 - Base CRUD Api test
 - Criteria Query
 - Authentication and Authorization
+- Arch unit
 - More 
+
+## reference 
+
+- https://github.com/lihengming/spring-boot-api-project-seed
  
 
