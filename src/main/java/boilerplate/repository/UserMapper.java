@@ -6,5 +6,5 @@ import boilerplate.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface UserCommonMapper extends CommonMapper<User> {
+public interface UserMapper extends CommonMapper<User> {
 }
