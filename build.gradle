@@ -29,15 +29,21 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.0'
+    // spring
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'tk.mybatis:mapper-spring-boot-starter:2.1.5'
 
+    // mybatis
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.0'
+    implementation 'tk.mybatis:mapper-spring-boot-starter:2.1.5'
     implementation 'com.github.pagehelper:pagehelper:4.2.1'
 
-    compile 'com.h2database:h2'
+    compile 'org.springframework.boot:spring-boot-starter-security'
 
+    // database
+    compile 'com.h2database:h2'
     implementation 'org.flywaydb:flyway-core'
-    testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:2.1.0'
+
+    // test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:2.1.0'
 }
