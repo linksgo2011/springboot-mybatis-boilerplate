@@ -30,5 +30,6 @@ A boilerplate Template project for spring boot with mybatis.
 ## some blog for dashboard design 
 
 - https://blog.csdn.net/pamchen/article/details/80620729
+- https://www.mkyong.com/spring-boot/spring-rest-spring-security-example/
  
 
