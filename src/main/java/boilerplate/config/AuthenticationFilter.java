@@ -1,5 +1,6 @@
 package boilerplate.config;
 
+import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
@@ -25,6 +26,9 @@ public class AuthenticationFilter extends AbstractAuthenticationProcessingFilter
     @Override
     public Authentication attemptAuthentication(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws AuthenticationException {
         String token = httpServletRequest.getHeader(AUTHORIZATION);
+        if(StringUtils.isEmpty(token)){
+            throw new AuthenticationCredentialsNotFoundException("");
+        }
         token = StringUtils.replace(token, "Bearer", "").trim();
         Authentication requestAuthentication = new UsernamePasswordAuthenticationToken(token, token);
         return getAuthenticationManager().authenticate(requestAuthentication);
