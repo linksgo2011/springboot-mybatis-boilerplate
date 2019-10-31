@@ -14,7 +14,7 @@ public abstract class AbstractService<T> implements Service<T> {
     @Autowired
     protected CommonMapper<T> commonMapper;
 
-    private Class<T> modelClass;    // 当前泛型真实类型的Class
+    private Class<T> modelClass;
 
     public AbstractService() {
         ParameterizedType pt = (ParameterizedType) this.getClass().getGenericSuperclass();

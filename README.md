@@ -6,8 +6,10 @@ A boilerplate Template project for spring boot with mybatis.
 
 - Flyway DB migration
 - Base CRUD with MyBatis  
+- log
 - Pagination 
-- Common mapper
+- Common mapper 
+- Example query
 - One to Many relationship 
 - Auth system >> current
 - Swagger
