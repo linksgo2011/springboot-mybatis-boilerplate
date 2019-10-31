@@ -8,12 +8,14 @@ A boilerplate Template project for spring boot with mybatis.
 - Base CRUD with MyBatis  
 - Pagination 
 - Common mapper
-- One to Many relationship >> current
-- Auth system
+- One to Many relationship 
+- Auth system >> current
+- Swagger
 - Base CRUD Api test
 - Criteria Query
 - Authentication and Authorization
 - Arch unit
+- Feature toggle
 - More 
 
 ## some dashboard projects for reference 
