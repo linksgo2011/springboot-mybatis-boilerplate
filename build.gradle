@@ -43,11 +43,12 @@ dependencies {
     compile 'com.h2database:h2'
     implementation 'org.flywaydb:flyway-core'
 
-    // test
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:2.1.0'
-
     // tools
     compileOnly('org.projectlombok:lombok:1.16.6')
     annotationProcessor('org.projectlombok:lombok:1.16.6')
+    compile('org.springframework.boot:spring-boot-devtools')
+
+    // test
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:2.1.0'
 }
