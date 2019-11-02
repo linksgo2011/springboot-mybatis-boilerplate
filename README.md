@@ -11,14 +11,20 @@ A boilerplate Template project for spring boot with mybatis.
 - Common mapper 
 - Example query
 - One to Many relationship 
-- Auth system >> current
-- Swagger
+- Auth system 
+- Swagger >> current
 - Base CRUD Api test
 - Criteria Query
 - Authentication and Authorization
 - Arch unit
 - Feature toggle
+- shedlock
+- log
 - More 
+
+
+## how to run this
+
 
 ## some dashboard projects for reference 
 
