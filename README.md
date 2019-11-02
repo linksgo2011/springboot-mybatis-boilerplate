@@ -37,5 +37,6 @@ A boilerplate Template project for spring boot with mybatis.
 - https://www.mkyong.com/spring-boot/spring-rest-spring-security-example/
 - https://www.javadevjournal.com/spring/securing-a-restful-web-service-with-spring-security/
 - https://github.com/umeshawasthi/javadevjournal/tree/master/Spring-Boot/spring-security-rest-api
+- https://www.springboottutorial.com/spring-boot-swagger-documentation-for-rest-services
  
 
