@@ -12,16 +12,16 @@ A boilerplate Template project for spring boot with mybatis.
 - Example query
 - One to Many relationship 
 - Auth system 
-- Swagger >> current
+- Swagger 
+- jib plugin for docker >> current
 - Base CRUD Api test
 - Criteria Query
-- Authentication and Authorization
+- Authorization and ACL
 - Arch unit
 - Feature toggle
 - shedlock
 - log
 - More 
-
 
 ## how to run this
 
@@ -36,6 +36,7 @@ A boilerplate Template project for spring boot with mybatis.
 - https://github.com/abel533/MyBatis-Spring-Boot
 - https://github.com/lihengming/spring-boot-api-project-seed
 - https://github.com/wyait/manage
+- https://github.com/GoogleContainerTools/jib/tree/master/examples/spring-boot Dockerize a Spring Boot application using Jib
 
 ## some blog for dashboard design 
 
