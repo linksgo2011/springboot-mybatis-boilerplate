@@ -28,6 +28,7 @@ A boilerplate Template project for spring boot with mybatis.
 
 ## some dashboard projects for reference 
 
+- https://github.com/lmxdawn/vue-admin-java
 - JeeSite 
 - guns
 - AG-Admin
